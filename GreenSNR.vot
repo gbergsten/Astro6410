@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.ivoa.net/xml/VOTable/v1.2"
+  xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.2 http://www.ivoa.net/xml/VOTable/v1.2">
+ <DESCRIPTION>
+   VizieR Astronomical Server vizier.u-strasbg.fr
+    Date: 2018-09-05T17:37:41 [V1.99+ (14-Oct-2013)]
+   Explanations and Statistics of UCDs:			See LINK below
+   In case of problem, please report to:	cds-question@unistra.fr
+   In this version, NULL integer columns are written as an empty string
+   &lt;TD&gt;&lt;/TD&gt;, explicitely possible from VOTable-1.3
+ </DESCRIPTION>
+<!-- VOTable description at http://www.ivoa.net/Documents/latest/VOT.html -->
+<INFO ID="VERSION" name="votable-version" value="1.99+ (14-Oct-2013)"/>
+<INFO ID="Ref" name="-ref" value="VIZ5b901452646e"/>
+<INFO ID="MaxTuples" name="-out.max" value="1000"/>
+<INFO name="queryParameters" value="26">
+-oc.form=dec
+-out.max=1000
+-out.all=2
+-nav=cat:VII/272&amp;tab:{VII/272/snrs}&amp;key:source=VII/272&amp;HTTPPRM:&amp;
+-c.eq=J2000
+-c.r=  2
+-c.u=arcmin
+-c.geom=r
+-source=VII/272/snrs
+-order=I
+-out=SNR
+-out=RAJ2000
+-out=DEJ2000
+-out=Dmaj
+-out=Dmin
+-out=u_Dmin
+-out=type
+-out=l_S(1GHz)
+-out=S(1GHz)
+-out=u_S(1GHz)
+-out=alpha
+-out=u_alpha
+-out=Names
+-out=Simbad
+Simbad=Simbad
+-out.all=2
+</INFO>
+
+<!--
+Execution Reports
+ -->
+
+<RESOURCE ID="yCat_7272" name="VII/272">
+  <DESCRIPTION>A catalogue of Galactic supernova remnants (Green, 2014)</DESCRIPTION>
+  <COOSYS ID="J2000" system="eq_FK5" equinox="J2000"/>
+  <TABLE ID="VII_272_snrs" name="VII/272/snrs">
+    <DESCRIPTION>Supernova Remnant catalogue</DESCRIPTION>
+    <!-- Definitions of GROUPs and FIELDs -->
+    <FIELD name="SNR" ucd="meta.id;meta.main" datatype="char" arraysize="11"><!-- ucd="ID_MAIN" -->
+      <DESCRIPTION>*Supernova Remnant designation</DESCRIPTION>
+<!-- Supernova Remnant designation \linkRole{details from the on-line SNR catalog} -->
+
+    </FIELD>
+    <FIELD name="RAJ2000" ucd="pos.eq.ra;meta.main" ref="J2000" datatype="char" arraysize="8" unit="&quot;h:m:s&quot;"><!-- ucd="POS_EQ_RA_MAIN" -->
+      <DESCRIPTION>Right Ascension J2000 hours</DESCRIPTION>
+    </FIELD>
+    <FIELD name="DEJ2000" ucd="pos.eq.dec;meta.main" ref="J2000" datatype="char" arraysize="6" unit="&quot;d:m:s&quot;"><!-- ucd="POS_EQ_DEC_MAIN" -->
+      <DESCRIPTION>Declination J2000 degrees</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Dmaj" ucd="phys.angSize" datatype="float" width="5" precision="1" unit="arcmin"><!-- ucd="EXTENSION_DIAM" -->
+      <DESCRIPTION>Major Angular Size of remnant</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Dmin" ucd="phys.angSize" datatype="float" width="5" precision="1" unit="arcmin"><!-- ucd="EXTENSION_MIN" -->
+      <DESCRIPTION>? Minor Angular Size of remnant</DESCRIPTION>
+      <VALUES null="NaN" />
+    </FIELD>
+    <FIELD name="u_Dmin" ucd="meta.code.error" datatype="char" arraysize="1"><!-- ucd="CODE_ERROR" -->
+      <DESCRIPTION>[?] Uncertainty flag on Angular Size</DESCRIPTION>
+    </FIELD>
+    <FIELD name="type" ucd="src.class.struct" datatype="char" arraysize="2"><!-- ucd="CLASS_STRUCT" -->
+      <DESCRIPTION>[CFS? ] Type of remnant</DESCRIPTION>
+    </FIELD>
+    <FIELD name="l_S(1GHz)" ucd="meta.code.error" datatype="char" arraysize="1"><!-- ucd="CODE_LIMIT" -->
+      <DESCRIPTION>[&gt;] Limit flag on S(1GHz)</DESCRIPTION>
+    </FIELD>
+    <FIELD name="S(1GHz)" ucd="phot.flux.density;em.radio.750-1500MHz" datatype="float" width="6" precision="1" unit="Jy"><!-- ucd="PHOT_FLUX_RADIO_1G" -->
+      <DESCRIPTION>? Flux Density at 1 GHz</DESCRIPTION>
+      <VALUES null="NaN" />
+    </FIELD>
+    <FIELD name="u_S(1GHz)" ucd="meta.code.error" datatype="char" arraysize="1"><!-- ucd="CODE_ERROR" -->
+      <DESCRIPTION>[?] Uncertainty flag on S(1GHz)</DESCRIPTION>
+    </FIELD>
+    <FIELD name="alpha" ucd="spect.index;em.radio" datatype="float" width="5" precision="2"><!-- ucd="SPECT_SP-INDEX" -->
+      <DESCRIPTION>? Spectral Index of integrated radio emission</DESCRIPTION>
+      <VALUES null="NaN" />
+    </FIELD>
+    <FIELD name="u_alpha" ucd="meta.code.error;pos.eq.ra" datatype="char" arraysize="2"><!-- ucd="CODE_ERROR" -->
+      <DESCRIPTION>[?v ] Uncertainty and variability flag on alpha</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Names" ucd="meta.id" datatype="char" arraysize="26*"><!-- ucd="ID_ALTERNATIVE" -->
+      <DESCRIPTION>Other names commonly used</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Simbad" ucd="meta.ref.url" datatype="char" arraysize="6*"><!-- ucd="DATA_LINK" -->
+      <DESCRIPTION>Simbad column added by the CDS</DESCRIPTION>
+<!-- ask the {\bf\fg{FireBrick}Simbad} data-base about this object -->
+
+    </FIELD>
+<DATA><TABLEDATA>
+<TR><TD>G000.0+00.0</TD><TD>17 45 44</TD><TD>-29 00</TD><TD>3.5</TD><TD>2.5</TD><TD></TD><TD>S</TD><TD></TD><TD>100.0</TD><TD>?</TD><TD>0.80</TD><TD>?</TD><TD>Sgr A East</TD><TD>Simbad</TD></TR>
+<TR><TD>G000.3+00.0</TD><TD>17 46 15</TD><TD>-28 38</TD><TD>15.0</TD><TD>8.0</TD><TD></TD><TD>S</TD><TD></TD><TD>22.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G000.9+00.1</TD><TD>17 47 21</TD><TD>-28 09</TD><TD>8.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>18.0</TD><TD>?</TD><TD></TD><TD>v</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G001.0-00.1</TD><TD>17 48 30</TD><TD>-28 09</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>15.0</TD><TD></TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G001.4-00.1</TD><TD>17 49 39</TD><TD>-27 46</TD><TD>10.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G001.9+00.3</TD><TD>17 48 45</TD><TD>-27 10</TD><TD>1.5</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.6</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G003.7-00.2</TD><TD>17 55 26</TD><TD>-25 50</TD><TD>14.0</TD><TD>11.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.3</TD><TD></TD><TD>0.65</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G003.8+00.3</TD><TD>17 52 55</TD><TD>-25 28</TD><TD>18.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G004.2-03.5</TD><TD>18 08 55</TD><TD>-27 03</TD><TD>28.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.2</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G004.5+06.8</TD><TD>17 30 42</TD><TD>-21 29</TD><TD>3.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>19.0</TD><TD></TD><TD>0.64</TD><TD></TD><TD>Kepler, SN1604, 3C358</TD><TD>Simbad</TD></TR>
+<TR><TD>G004.8+06.2</TD><TD>17 33 25</TD><TD>-21 34</TD><TD>18.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G005.2-02.6</TD><TD>18 07 30</TD><TD>-25 45</TD><TD>18.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.6</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G005.4-01.2</TD><TD>18 02 10</TD><TD>-24 54</TD><TD>35.0</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD>35.0</TD><TD>?</TD><TD>0.20</TD><TD>?</TD><TD>Milne 56</TD><TD>Simbad</TD></TR>
+<TR><TD>G005.5+00.3</TD><TD>17 57 04</TD><TD>-24 00</TD><TD>15.0</TD><TD>12.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.5</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G005.9+03.1</TD><TD>17 47 20</TD><TD>-22 16</TD><TD>20.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.3</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G006.1+00.5</TD><TD>17 57 29</TD><TD>-23 25</TD><TD>18.0</TD><TD>12.0</TD><TD></TD><TD>S</TD><TD></TD><TD>4.5</TD><TD></TD><TD>0.90</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G006.1+01.2</TD><TD>17 54 55</TD><TD>-23 05</TD><TD>30.0</TD><TD>26.0</TD><TD></TD><TD>F</TD><TD></TD><TD>4.0</TD><TD>?</TD><TD>0.30</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G006.4-00.1</TD><TD>18 00 30</TD><TD>-23 26</TD><TD>48.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>310.0</TD><TD></TD><TD></TD><TD>v</TD><TD>W28</TD><TD>Simbad</TD></TR>
+<TR><TD>G006.4+04.0</TD><TD>17 45 10</TD><TD>-21 22</TD><TD>31.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.3</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G006.5-00.4</TD><TD>18 02 11</TD><TD>-23 34</TD><TD>18.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>27.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G007.0-00.1</TD><TD>18 01 50</TD><TD>-22 54</TD><TD>15.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.5</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G007.2+00.2</TD><TD>18 01 07</TD><TD>-22 38</TD><TD>12.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.8</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G007.7-03.7</TD><TD>18 17 25</TD><TD>-24 04</TD><TD>22.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>11.0</TD><TD></TD><TD>0.32</TD><TD></TD><TD>1814-24</TD><TD>Simbad</TD></TR>
+<TR><TD>G008.3-00.0</TD><TD>18 04 34</TD><TD>-21 49</TD><TD>5.0</TD><TD>4.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.2</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G008.7-05.0</TD><TD>18 24 10</TD><TD>-23 48</TD><TD>26.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.4</TD><TD></TD><TD>0.30</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G008.7-00.1</TD><TD>18 05 30</TD><TD>-21 26</TD><TD>45.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>80.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>(W30)</TD><TD>Simbad</TD></TR>
+<TR><TD>G008.9+00.4</TD><TD>18 03 58</TD><TD>-21 03</TD><TD>24.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>9.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G009.7-00.0</TD><TD>18 07 22</TD><TD>-20 35</TD><TD>15.0</TD><TD>11.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.7</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G009.8+00.6</TD><TD>18 05 08</TD><TD>-20 14</TD><TD>12.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.9</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G009.9-00.8</TD><TD>18 10 41</TD><TD>-20 43</TD><TD>12.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>6.7</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G010.5-00.0</TD><TD>18 09 08</TD><TD>-19 47</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.9</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.0-00.0</TD><TD>18 10 04</TD><TD>-19 25</TD><TD>11.0</TD><TD>9.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.3</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.1-01.0</TD><TD>18 14 03</TD><TD>-19 46</TD><TD>18.0</TD><TD>12.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.8</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.1-00.7</TD><TD>18 12 46</TD><TD>-19 38</TD><TD>11.0</TD><TD>7.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.0</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.1+00.1</TD><TD>18 09 47</TD><TD>-19 12</TD><TD>12.0</TD><TD>10.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.3</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.2-00.3</TD><TD>18 11 27</TD><TD>-19 25</TD><TD>4.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>22.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.4-00.1</TD><TD>18 10 47</TD><TD>-19 05</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G011.8-00.2</TD><TD>18 12 25</TD><TD>-18 44</TD><TD>4.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.7</TD><TD></TD><TD>0.30</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G012.0-00.1</TD><TD>18 12 11</TD><TD>-18 37</TD><TD>7.0</TD><TD></TD><TD>?</TD><TD>?</TD><TD></TD><TD>3.5</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G012.2+00.3</TD><TD>18 11 17</TD><TD>-18 10</TD><TD>6.0</TD><TD>5.0</TD><TD></TD><TD>S</TD><TD></TD><TD>0.8</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G012.5+00.2</TD><TD>18 12 14</TD><TD>-17 55</TD><TD>6.0</TD><TD>5.0</TD><TD></TD><TD>C?</TD><TD></TD><TD>0.6</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G012.7-00.0</TD><TD>18 13 19</TD><TD>-17 54</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.8</TD><TD></TD><TD>0.80</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G012.8-00.0</TD><TD>18 13 37</TD><TD>-17 49</TD><TD>3.0</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD>0.8</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G013.3-01.3</TD><TD>18 19 20</TD><TD>-18 00</TD><TD>70.0</TD><TD>40.0</TD><TD></TD><TD>S?</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G013.5+00.2</TD><TD>18 14 14</TD><TD>-17 12</TD><TD>5.0</TD><TD>4.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.5</TD><TD>?</TD><TD>1.00</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G014.1-00.1</TD><TD>18 16 40</TD><TD>-16 41</TD><TD>6.0</TD><TD>5.0</TD><TD></TD><TD>S</TD><TD></TD><TD>0.5</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G014.3+00.1</TD><TD>18 15 58</TD><TD>-16 27</TD><TD>5.0</TD><TD>4.0</TD><TD></TD><TD>S</TD><TD></TD><TD>0.6</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G015.1-01.6</TD><TD>18 24 00</TD><TD>-16 34</TD><TD>30.0</TD><TD>24.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>5.5</TD><TD>?</TD><TD>0.00</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G015.4+00.1</TD><TD>18 18 02</TD><TD>-15 27</TD><TD>15.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.6</TD><TD></TD><TD>0.62</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G015.9+00.2</TD><TD>18 18 52</TD><TD>-15 02</TD><TD>7.0</TD><TD>5.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>5.0</TD><TD></TD><TD>0.63</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G016.0-00.5</TD><TD>18 21 56</TD><TD>-15 14</TD><TD>15.0</TD><TD>10.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.7</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G016.2-02.7</TD><TD>18 29 40</TD><TD>-16 08</TD><TD>17.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.5</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G016.4-00.5</TD><TD>18 22 38</TD><TD>-14 55</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.6</TD><TD></TD><TD>0.30</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G016.7+00.1</TD><TD>18 20 56</TD><TD>-14 20</TD><TD>4.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>3.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G017.0-00.0</TD><TD>18 21 57</TD><TD>-14 08</TD><TD>5.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.5</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G017.4-02.3</TD><TD>18 30 55</TD><TD>-14 52</TD><TD>24.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD>5.0</TD><TD></TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G017.4-00.1</TD><TD>18 23 08</TD><TD>-13 46</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.4</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G017.8-02.6</TD><TD>18 32 50</TD><TD>-14 39</TD><TD>24.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G018.1-00.1</TD><TD>18 24 34</TD><TD>-13 11</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.6</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G018.6-00.2</TD><TD>18 25 55</TD><TD>-12 50</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.4</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G018.8+00.3</TD><TD>18 23 58</TD><TD>-12 23</TD><TD>17.0</TD><TD>11.0</TD><TD></TD><TD>S</TD><TD></TD><TD>33.0</TD><TD></TD><TD>0.46</TD><TD></TD><TD>Kes 67</TD><TD>Simbad</TD></TR>
+<TR><TD>G018.9-01.1</TD><TD>18 29 50</TD><TD>-12 58</TD><TD>33.0</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD>37.0</TD><TD></TD><TD>0.39</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G019.1+00.2</TD><TD>18 24 56</TD><TD>-12 07</TD><TD>27.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>10.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G020.0-00.2</TD><TD>18 28 07</TD><TD>-11 35</TD><TD>10.0</TD><TD></TD><TD></TD><TD>F</TD><TD></TD><TD>10.0</TD><TD></TD><TD>0.10</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G020.4+00.1</TD><TD>18 27 51</TD><TD>-11 00</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>9.0</TD><TD>?</TD><TD>0.10</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G021.0-00.4</TD><TD>18 31 12</TD><TD>-10 47</TD><TD>9.0</TD><TD>7.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.1</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G021.5-00.9</TD><TD>18 33 33</TD><TD>-10 35</TD><TD>5.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>7.0</TD><TD></TD><TD></TD><TD>v</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G021.5-00.1</TD><TD>18 30 50</TD><TD>-10 09</TD><TD>5.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.4</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G021.6-00.8</TD><TD>18 33 40</TD><TD>-10 25</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.4</TD><TD></TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G021.8-00.6</TD><TD>18 32 45</TD><TD>-10 08</TD><TD>20.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>65.0</TD><TD></TD><TD>0.56</TD><TD></TD><TD>Kes 69</TD><TD>Simbad</TD></TR>
+<TR><TD>G022.7-00.2</TD><TD>18 33 15</TD><TD>-09 13</TD><TD>26.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>33.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G023.3-00.3</TD><TD>18 34 45</TD><TD>-08 48</TD><TD>27.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>70.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>W41</TD><TD>Simbad</TD></TR>
+<TR><TD>G023.6+00.3</TD><TD>18 33 03</TD><TD>-08 13</TD><TD>10.0</TD><TD></TD><TD>?</TD><TD>?</TD><TD></TD><TD>8.0</TD><TD>?</TD><TD>0.30</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G024.7-00.6</TD><TD>18 38 43</TD><TD>-07 32</TD><TD>15.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G024.7+00.6</TD><TD>18 34 10</TD><TD>-07 05</TD><TD>30.0</TD><TD>15.0</TD><TD></TD><TD>C?</TD><TD></TD><TD>20.0</TD><TD>?</TD><TD>0.20</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G025.1-02.3</TD><TD>18 45 10</TD><TD>-08 00</TD><TD>80.0</TD><TD>30.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G027.4+00.0</TD><TD>18 41 19</TD><TD>-04 56</TD><TD>4.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.68</TD><TD></TD><TD>4C-04.71</TD><TD>Simbad</TD></TR>
+<TR><TD>G027.8+00.6</TD><TD>18 39 50</TD><TD>-04 24</TD><TD>50.0</TD><TD>30.0</TD><TD></TD><TD>F</TD><TD></TD><TD>30.0</TD><TD></TD><TD></TD><TD>v</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G028.6-00.1</TD><TD>18 43 55</TD><TD>-03 53</TD><TD>13.0</TD><TD>9.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G028.8+01.5</TD><TD>18 39 00</TD><TD>-02 55</TD><TD>100.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD></TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G029.6+00.1</TD><TD>18 44 52</TD><TD>-02 57</TD><TD>5.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.5</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G029.7-00.3</TD><TD>18 46 25</TD><TD>-02 59</TD><TD>3.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>10.0</TD><TD></TD><TD>0.63</TD><TD></TD><TD>Kes 75</TD><TD>Simbad</TD></TR>
+<TR><TD>G030.7-02.0</TD><TD>18 54 25</TD><TD>-02 54</TD><TD>16.0</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>0.5</TD><TD>?</TD><TD>0.70</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G030.7+01.0</TD><TD>18 44 00</TD><TD>-01 32</TD><TD>24.0</TD><TD>18.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G031.5-00.6</TD><TD>18 51 10</TD><TD>-01 31</TD><TD>18.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>2.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G031.9+00.0</TD><TD>18 49 25</TD><TD>-00 55</TD><TD>7.0</TD><TD>5.0</TD><TD></TD><TD>S</TD><TD></TD><TD>25.0</TD><TD></TD><TD></TD><TD>v</TD><TD>3C391</TD><TD>Simbad</TD></TR>
+<TR><TD>G032.0-04.9</TD><TD>19 06 00</TD><TD>-03 00</TD><TD>60.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>22.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD>3C396.1</TD><TD>Simbad</TD></TR>
+<TR><TD>G032.1-00.9</TD><TD>18 53 10</TD><TD>-01 08</TD><TD>40.0</TD><TD></TD><TD>?</TD><TD>C?</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G032.4+00.1</TD><TD>18 50 05</TD><TD>-00 25</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.2</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G032.8-00.1</TD><TD>18 51 25</TD><TD>-00 08</TD><TD>17.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>11.0</TD><TD>?</TD><TD>0.20</TD><TD>?</TD><TD>Kes 78</TD><TD>Simbad</TD></TR>
+<TR><TD>G033.2-00.6</TD><TD>18 53 50</TD><TD>-00 02</TD><TD>18.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.5</TD><TD></TD><TD></TD><TD>v</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G033.6+00.1</TD><TD>18 52 48</TD><TD>+00 41</TD><TD>10.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>20.0</TD><TD></TD><TD>0.51</TD><TD></TD><TD>Kes 79, 4C00.70, HC13</TD><TD>Simbad</TD></TR>
+<TR><TD>G034.7-00.4</TD><TD>18 56 00</TD><TD>+01 22</TD><TD>35.0</TD><TD>27.0</TD><TD></TD><TD>C</TD><TD></TD><TD>250.0</TD><TD></TD><TD>0.37</TD><TD></TD><TD>W44, 3C392</TD><TD>Simbad</TD></TR>
+<TR><TD>G035.6-00.4</TD><TD>18 57 55</TD><TD>+02 13</TD><TD>15.0</TD><TD>11.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>9.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G036.6-00.7</TD><TD>19 00 35</TD><TD>+02 56</TD><TD>25.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>1.0</TD><TD></TD><TD>0.70</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G036.6+02.6</TD><TD>18 48 49</TD><TD>+04 26</TD><TD>17.0</TD><TD>13.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD>0.7</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G038.7-01.3</TD><TD>19 06 40</TD><TD>+04 28</TD><TD>32.0</TD><TD>19.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G039.2-00.3</TD><TD>19 04 08</TD><TD>+05 28</TD><TD>8.0</TD><TD>6.0</TD><TD></TD><TD>C</TD><TD></TD><TD>18.0</TD><TD></TD><TD>0.34</TD><TD></TD><TD>3C396, HC24, NRAO 593</TD><TD>Simbad</TD></TR>
+<TR><TD>G039.7-02.0</TD><TD>19 12 20</TD><TD>+04 55</TD><TD>120.0</TD><TD>60.0</TD><TD></TD><TD>?</TD><TD></TD><TD>85.0</TD><TD>?</TD><TD>0.70</TD><TD>?</TD><TD>W50, SS433</TD><TD>Simbad</TD></TR>
+<TR><TD>G040.5-00.5</TD><TD>19 07 10</TD><TD>+06 31</TD><TD>22.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>11.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G041.1-00.3</TD><TD>19 07 34</TD><TD>+07 08</TD><TD>4.5</TD><TD>2.5</TD><TD></TD><TD>S</TD><TD></TD><TD>25.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>3C397</TD><TD>Simbad</TD></TR>
+<TR><TD>G041.5+00.4</TD><TD>19 05 50</TD><TD>+07 46</TD><TD>10.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>1.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G042.0-00.1</TD><TD>19 08 10</TD><TD>+08 00</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>0.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G042.8+00.6</TD><TD>19 07 20</TD><TD>+09 05</TD><TD>24.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G043.3-00.2</TD><TD>19 11 08</TD><TD>+09 06</TD><TD>4.0</TD><TD>3.0</TD><TD></TD><TD>S</TD><TD></TD><TD>38.0</TD><TD></TD><TD>0.46</TD><TD></TD><TD>W49B</TD><TD>Simbad</TD></TR>
+<TR><TD>G043.9+01.6</TD><TD>19 05 50</TD><TD>+10 30</TD><TD>60.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>9.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G045.7-00.4</TD><TD>19 16 25</TD><TD>+11 09</TD><TD>22.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.2</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G046.8-00.3</TD><TD>19 18 10</TD><TD>+12 09</TD><TD>17.0</TD><TD>13.0</TD><TD></TD><TD>S</TD><TD></TD><TD>17.0</TD><TD></TD><TD>0.54</TD><TD></TD><TD>(HC30)</TD><TD>Simbad</TD></TR>
+<TR><TD>G049.2-00.7</TD><TD>19 23 50</TD><TD>+14 06</TD><TD>30.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>160.0</TD><TD>?</TD><TD>0.30</TD><TD>?</TD><TD>(W51)</TD><TD>Simbad</TD></TR>
+<TR><TD>G053.6-02.2</TD><TD>19 38 50</TD><TD>+17 14</TD><TD>33.0</TD><TD>28.0</TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>3C400.2, NRAO 611</TD><TD>Simbad</TD></TR>
+<TR><TD>G054.1+00.3</TD><TD>19 30 31</TD><TD>+18 52</TD><TD>12.0</TD><TD></TD><TD>?</TD><TD>C?</TD><TD></TD><TD>0.5</TD><TD></TD><TD>0.10</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G054.4-00.3</TD><TD>19 33 20</TD><TD>+18 56</TD><TD>40.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>28.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>(HC40)</TD><TD>Simbad</TD></TR>
+<TR><TD>G055.0+00.3</TD><TD>19 32 00</TD><TD>+19 50</TD><TD>20.0</TD><TD>15.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD>0.5</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G055.7+03.4</TD><TD>19 21 20</TD><TD>+21 44</TD><TD>23.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.0</TD><TD>?</TD><TD>0.30</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G057.2+00.8</TD><TD>19 34 59</TD><TD>+21 57</TD><TD>12.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>1.8</TD><TD></TD><TD>0.62</TD><TD></TD><TD>(4C21.53)</TD><TD>Simbad</TD></TR>
+<TR><TD>G059.5+00.1</TD><TD>19 42 33</TD><TD>+23 35</TD><TD>15.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G059.8+01.2</TD><TD>19 38 55</TD><TD>+24 19</TD><TD>20.0</TD><TD>16.0</TD><TD>?</TD><TD>?</TD><TD></TD><TD>1.5</TD><TD></TD><TD>0.00</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G063.7+01.1</TD><TD>19 47 52</TD><TD>+27 45</TD><TD>8.0</TD><TD></TD><TD></TD><TD>F</TD><TD></TD><TD>1.8</TD><TD></TD><TD>0.24</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G064.5+00.9</TD><TD>19 50 25</TD><TD>+28 16</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>0.2</TD><TD>?</TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G065.1+00.6</TD><TD>19 54 40</TD><TD>+28 35</TD><TD>90.0</TD><TD>50.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.5</TD><TD></TD><TD>0.61</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G065.3+05.7</TD><TD>19 33 00</TD><TD>+31 10</TD><TD>310.0</TD><TD>240.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>42.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G065.7+01.2</TD><TD>19 52 10</TD><TD>+29 26</TD><TD>22.0</TD><TD></TD><TD></TD><TD>F</TD><TD></TD><TD>5.1</TD><TD></TD><TD></TD><TD>v</TD><TD>DA 495</TD><TD>Simbad</TD></TR>
+<TR><TD>G065.8-00.5</TD><TD>19 59 20</TD><TD>+28 38</TD><TD>10.0</TD><TD>6.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G066.0-00.0</TD><TD>19 57 50</TD><TD>+29 03</TD><TD>31.0</TD><TD>25.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G067.6+00.9</TD><TD>19 57 45</TD><TD>+30 53</TD><TD>50.0</TD><TD>45.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G067.7+01.8</TD><TD>19 54 32</TD><TD>+31 29</TD><TD>15.0</TD><TD>12.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.0</TD><TD></TD><TD>0.61</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G067.8+00.5</TD><TD>20 00 00</TD><TD>+30 51</TD><TD>7.0</TD><TD>5.0</TD><TD></TD><TD>?</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G068.6-01.2</TD><TD>20 08 40</TD><TD>+30 37</TD><TD>23.0</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>1.1</TD><TD></TD><TD>0.20</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G069.0+02.7</TD><TD>19 53 20</TD><TD>+32 55</TD><TD>80.0</TD><TD></TD><TD>?</TD><TD>?</TD><TD></TD><TD>120.0</TD><TD>?</TD><TD></TD><TD>v</TD><TD>CTB 80</TD><TD>Simbad</TD></TR>
+<TR><TD>G069.7+01.0</TD><TD>20 02 40</TD><TD>+32 43</TD><TD>16.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.0</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G073.9+00.9</TD><TD>20 14 15</TD><TD>+36 12</TD><TD>27.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>9.0</TD><TD></TD><TD>0.23</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G074.0-08.5</TD><TD>20 51 00</TD><TD>+30 40</TD><TD>230.0</TD><TD>160.0</TD><TD></TD><TD>S</TD><TD></TD><TD>210.0</TD><TD></TD><TD></TD><TD>v</TD><TD>Cygnus Loop</TD><TD>Simbad</TD></TR>
+<TR><TD>G074.9+01.2</TD><TD>20 16 02</TD><TD>+37 12</TD><TD>8.0</TD><TD>6.0</TD><TD></TD><TD>F</TD><TD></TD><TD>9.0</TD><TD></TD><TD></TD><TD>v</TD><TD>CTB 87</TD><TD>Simbad</TD></TR>
+<TR><TD>G076.9+01.0</TD><TD>20 22 20</TD><TD>+38 43</TD><TD>9.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>2.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G078.2+02.1</TD><TD>20 20 50</TD><TD>+40 26</TD><TD>60.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>320.0</TD><TD></TD><TD>0.51</TD><TD></TD><TD>DR4, gamma Cygni SNR</TD><TD>Simbad</TD></TR>
+<TR><TD>G082.2+05.3</TD><TD>20 19 00</TD><TD>+45 30</TD><TD>95.0</TD><TD>65.0</TD><TD></TD><TD>S</TD><TD></TD><TD>120.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD>W63</TD><TD>Simbad</TD></TR>
+<TR><TD>G083.0-00.3</TD><TD>20 46 55</TD><TD>+42 52</TD><TD>9.0</TD><TD>7.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G084.2-00.8</TD><TD>20 53 20</TD><TD>+43 27</TD><TD>20.0</TD><TD>16.0</TD><TD></TD><TD>S</TD><TD></TD><TD>11.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G085.4+00.7</TD><TD>20 50 40</TD><TD>+45 22</TD><TD>24.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD>0.20</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G085.9-00.6</TD><TD>20 58 40</TD><TD>+44 53</TD><TD>24.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD>0.20</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G089.0+04.7</TD><TD>20 45 00</TD><TD>+50 35</TD><TD>120.0</TD><TD>90.0</TD><TD></TD><TD>S</TD><TD></TD><TD>220.0</TD><TD></TD><TD>0.38</TD><TD></TD><TD>HB21</TD><TD>Simbad</TD></TR>
+<TR><TD>G093.3+06.9</TD><TD>20 52 25</TD><TD>+55 21</TD><TD>27.0</TD><TD>20.0</TD><TD></TD><TD>C?</TD><TD></TD><TD>9.0</TD><TD></TD><TD>0.45</TD><TD></TD><TD>DA 530, 4C(T)55.38.1</TD><TD>Simbad</TD></TR>
+<TR><TD>G093.7-00.2</TD><TD>21 29 20</TD><TD>+50 50</TD><TD>80.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>65.0</TD><TD></TD><TD>0.65</TD><TD></TD><TD>CTB 104A, DA 551</TD><TD>Simbad</TD></TR>
+<TR><TD>G094.0+01.0</TD><TD>21 24 50</TD><TD>+51 53</TD><TD>30.0</TD><TD>25.0</TD><TD></TD><TD>S</TD><TD></TD><TD>13.0</TD><TD></TD><TD>0.45</TD><TD></TD><TD>3C434.1</TD><TD>Simbad</TD></TR>
+<TR><TD>G096.0+02.0</TD><TD>21 30 30</TD><TD>+53 59</TD><TD>26.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.3</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G106.3+02.7</TD><TD>22 27 30</TD><TD>+60 50</TD><TD>60.0</TD><TD>24.0</TD><TD></TD><TD>C?</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G108.2-00.6</TD><TD>22 53 40</TD><TD>+58 50</TD><TD>70.0</TD><TD>54.0</TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G109.1-01.0</TD><TD>23 01 35</TD><TD>+58 53</TD><TD>28.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>22.0</TD><TD></TD><TD>0.45</TD><TD></TD><TD>CTB 109</TD><TD>Simbad</TD></TR>
+<TR><TD>G111.7-02.1</TD><TD>23 23 26</TD><TD>+58 48</TD><TD>5.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2720.0</TD><TD></TD><TD>0.77</TD><TD></TD><TD>Cassiopeia A, 3C461</TD><TD>Simbad</TD></TR>
+<TR><TD>G113.0+00.2</TD><TD>23 36 35</TD><TD>+61 22</TD><TD>40.0</TD><TD>17.0</TD><TD>?</TD><TD>?</TD><TD></TD><TD>4.0</TD><TD></TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G114.3+00.3</TD><TD>23 37 00</TD><TD>+61 55</TD><TD>90.0</TD><TD>55.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.5</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G116.5+01.1</TD><TD>23 53 40</TD><TD>+63 15</TD><TD>80.0</TD><TD>60.0</TD><TD></TD><TD>S</TD><TD></TD><TD>10.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G116.9+00.2</TD><TD>23 59 10</TD><TD>+62 26</TD><TD>34.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.57</TD><TD></TD><TD>CTB 1</TD><TD>Simbad</TD></TR>
+<TR><TD>G119.5+10.2</TD><TD>00 06 40</TD><TD>+72 45</TD><TD>90.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD>36.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD>CTA 1</TD><TD>Simbad</TD></TR>
+<TR><TD>G120.1+01.4</TD><TD>00 25 18</TD><TD>+64 09</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>56.0</TD><TD></TD><TD>0.58</TD><TD></TD><TD>Tycho, 3C10, SN1572</TD><TD>Simbad</TD></TR>
+<TR><TD>G126.2+01.6</TD><TD>01 22 00</TD><TD>+64 15</TD><TD>70.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G127.1+00.5</TD><TD>01 28 20</TD><TD>+63 10</TD><TD>45.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>12.0</TD><TD></TD><TD>0.45</TD><TD></TD><TD>R5</TD><TD>Simbad</TD></TR>
+<TR><TD>G130.7+03.1</TD><TD>02 05 41</TD><TD>+64 49</TD><TD>9.0</TD><TD>5.0</TD><TD></TD><TD>F</TD><TD></TD><TD>33.0</TD><TD></TD><TD>0.07</TD><TD></TD><TD>3C58, SN1181</TD><TD>Simbad</TD></TR>
+<TR><TD>G132.7+01.3</TD><TD>02 17 40</TD><TD>+62 45</TD><TD>80.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>45.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD>HB3</TD><TD>Simbad</TD></TR>
+<TR><TD>G152.4-02.1</TD><TD>04 07 50</TD><TD>+49 11</TD><TD>100.0</TD><TD>95.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.5</TD><TD>?</TD><TD>0.70</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G156.2+05.7</TD><TD>04 58 40</TD><TD>+51 50</TD><TD>110.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G159.6+07.3</TD><TD>05 20 00</TD><TD>+50 00</TD><TD>240.0</TD><TD>180.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G160.9+02.6</TD><TD>05 01 00</TD><TD>+46 40</TD><TD>140.0</TD><TD>120.0</TD><TD></TD><TD>S</TD><TD></TD><TD>110.0</TD><TD></TD><TD>0.64</TD><TD></TD><TD>HB9</TD><TD>Simbad</TD></TR>
+<TR><TD>G166.0+04.3</TD><TD>05 26 30</TD><TD>+42 56</TD><TD>55.0</TD><TD>35.0</TD><TD></TD><TD>S</TD><TD></TD><TD>7.0</TD><TD></TD><TD>0.37</TD><TD></TD><TD>VRO 42.05.01</TD><TD>Simbad</TD></TR>
+<TR><TD>G178.2-04.2</TD><TD>05 35 05</TD><TD>+28 11</TD><TD>72.0</TD><TD>62.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G179.0+02.6</TD><TD>05 53 40</TD><TD>+31 05</TD><TD>70.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>7.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G180.0-01.7</TD><TD>05 39 00</TD><TD>+27 50</TD><TD>180.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>65.0</TD><TD></TD><TD></TD><TD>v</TD><TD>S147</TD><TD>Simbad</TD></TR>
+<TR><TD>G182.4+04.3</TD><TD>06 08 10</TD><TD>+29 00</TD><TD>50.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.5</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G184.6-05.8</TD><TD>05 34 31</TD><TD>+22 01</TD><TD>7.0</TD><TD>5.0</TD><TD></TD><TD>F</TD><TD></TD><TD>1040.0</TD><TD></TD><TD>0.30</TD><TD></TD><TD>Crab Nebula, 3C144, SN1054</TD><TD>Simbad</TD></TR>
+<TR><TD>G189.1+03.0</TD><TD>06 17 00</TD><TD>+22 34</TD><TD>45.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>160.0</TD><TD></TD><TD>0.36</TD><TD></TD><TD>IC443, 3C157</TD><TD>Simbad</TD></TR>
+<TR><TD>G190.9-02.2</TD><TD>06 01 55</TD><TD>+18 24</TD><TD>70.0</TD><TD>60.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.3</TD><TD>?</TD><TD>0.70</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G192.8-01.1</TD><TD>06 09 20</TD><TD>+17 20</TD><TD>78.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>20.0</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD>PKS 0607+17</TD><TD>Simbad</TD></TR>
+<TR><TD>G205.5+00.5</TD><TD>06 39 00</TD><TD>+06 30</TD><TD>220.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>140.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD>Monoceros Nebula</TD><TD>Simbad</TD></TR>
+<TR><TD>G206.9+02.3</TD><TD>06 48 40</TD><TD>+06 26</TD><TD>60.0</TD><TD>40.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>PKS 0646+06</TD><TD>Simbad</TD></TR>
+<TR><TD>G213.0-00.6</TD><TD>06 50 50</TD><TD>-00 30</TD><TD>160.0</TD><TD>140.0</TD><TD>?</TD><TD>S</TD><TD></TD><TD>21.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G260.4-03.4</TD><TD>08 22 10</TD><TD>-43 00</TD><TD>60.0</TD><TD>50.0</TD><TD></TD><TD>S</TD><TD></TD><TD>130.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>Puppis A, MSH 08-44</TD><TD>Simbad</TD></TR>
+<TR><TD>G261.9+05.5</TD><TD>09 04 20</TD><TD>-38 42</TD><TD>40.0</TD><TD>30.0</TD><TD></TD><TD>S</TD><TD></TD><TD>10.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G263.9-03.3</TD><TD>08 34 00</TD><TD>-45 50</TD><TD>255.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>1750.0</TD><TD></TD><TD></TD><TD>v</TD><TD>Vela (XYZ)</TD><TD>Simbad</TD></TR>
+<TR><TD>G266.2-01.2</TD><TD>08 52 00</TD><TD>-46 20</TD><TD>120.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>50.0</TD><TD>?</TD><TD>0.30</TD><TD>?</TD><TD>RX J0852.0-4622</TD><TD>Simbad</TD></TR>
+<TR><TD>G272.2-03.2</TD><TD>09 06 50</TD><TD>-52 07</TD><TD>15.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>0.4</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G279.0+01.1</TD><TD>09 57 40</TD><TD>-53 15</TD><TD>95.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>30.0</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G284.3-01.8</TD><TD>10 18 15</TD><TD>-59 00</TD><TD>24.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD>11.0</TD><TD>?</TD><TD>0.30</TD><TD>?</TD><TD>MSH 10-53</TD><TD>Simbad</TD></TR>
+<TR><TD>G286.5-01.2</TD><TD>10 35 40</TD><TD>-59 42</TD><TD>26.0</TD><TD>6.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>1.4</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G289.7-00.3</TD><TD>11 01 15</TD><TD>-60 18</TD><TD>18.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>6.2</TD><TD></TD><TD>0.20</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G290.1-00.8</TD><TD>11 03 05</TD><TD>-60 56</TD><TD>19.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>42.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD>MSH 11-61A</TD><TD>Simbad</TD></TR>
+<TR><TD>G291.0-00.1</TD><TD>11 11 54</TD><TD>-60 38</TD><TD>15.0</TD><TD>13.0</TD><TD></TD><TD>C</TD><TD></TD><TD>16.0</TD><TD></TD><TD>0.29</TD><TD></TD><TD>(MSH 11-62)</TD><TD>Simbad</TD></TR>
+<TR><TD>G292.0+01.8</TD><TD>11 24 36</TD><TD>-59 16</TD><TD>12.0</TD><TD>8.0</TD><TD></TD><TD>C</TD><TD></TD><TD>15.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD>MSH 11-54</TD><TD>Simbad</TD></TR>
+<TR><TD>G292.2-00.5</TD><TD>11 19 20</TD><TD>-61 28</TD><TD>20.0</TD><TD>15.0</TD><TD></TD><TD>S</TD><TD></TD><TD>7.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G293.8+00.6</TD><TD>11 35 00</TD><TD>-60 54</TD><TD>20.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G294.1-00.0</TD><TD>11 36 10</TD><TD>-61 38</TD><TD>40.0</TD><TD></TD><TD></TD><TD>S</TD><TD>&gt;</TD><TD>2.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G296.1-00.5</TD><TD>11 51 10</TD><TD>-62 34</TD><TD>37.0</TD><TD>25.0</TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G296.5+10.0</TD><TD>12 09 40</TD><TD>-52 25</TD><TD>90.0</TD><TD>65.0</TD><TD></TD><TD>S</TD><TD></TD><TD>48.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>PKS 1209-51/52</TD><TD>Simbad</TD></TR>
+<TR><TD>G296.7-00.9</TD><TD>11 55 30</TD><TD>-63 08</TD><TD>15.0</TD><TD>8.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G296.8-00.3</TD><TD>11 58 30</TD><TD>-62 35</TD><TD>20.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>9.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD>1156-62</TD><TD>Simbad</TD></TR>
+<TR><TD>G298.5-00.3</TD><TD>12 12 40</TD><TD>-62 52</TD><TD>5.0</TD><TD></TD><TD>?</TD><TD>?</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G298.6-00.0</TD><TD>12 13 41</TD><TD>-62 37</TD><TD>12.0</TD><TD>9.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.30</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G299.2-02.9</TD><TD>12 15 13</TD><TD>-65 30</TD><TD>18.0</TD><TD>11.0</TD><TD></TD><TD>S</TD><TD></TD><TD>0.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G299.6-00.5</TD><TD>12 21 45</TD><TD>-63 09</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G301.4-01.0</TD><TD>12 37 55</TD><TD>-63 49</TD><TD>37.0</TD><TD>23.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.1</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G302.3+00.7</TD><TD>12 45 55</TD><TD>-62 08</TD><TD>17.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G304.6+00.1</TD><TD>13 05 59</TD><TD>-62 42</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>14.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>Kes 17</TD><TD>Simbad</TD></TR>
+<TR><TD>G306.3-00.9</TD><TD>13 21 50</TD><TD>-63 34</TD><TD>4.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>0.2</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G308.1-00.7</TD><TD>13 37 37</TD><TD>-63 04</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.2</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G308.4-01.4</TD><TD>13 41 30</TD><TD>-63 44</TD><TD>12.0</TD><TD>6.0</TD><TD>?</TD><TD>S?</TD><TD></TD><TD>0.4</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G308.8-00.1</TD><TD>13 42 30</TD><TD>-62 23</TD><TD>30.0</TD><TD>20.0</TD><TD>?</TD><TD>C?</TD><TD></TD><TD>15.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G309.2-00.6</TD><TD>13 46 31</TD><TD>-62 54</TD><TD>15.0</TD><TD>12.0</TD><TD></TD><TD>S</TD><TD></TD><TD>7.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G309.8+00.0</TD><TD>13 50 30</TD><TD>-62 05</TD><TD>25.0</TD><TD>19.0</TD><TD></TD><TD>S</TD><TD></TD><TD>17.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G310.6-01.6</TD><TD>14 00 45</TD><TD>-63 26</TD><TD>2.5</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G310.6-00.3</TD><TD>13 58 00</TD><TD>-62 09</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD>Kes 20B</TD><TD>Simbad</TD></TR>
+<TR><TD>G310.8-00.4</TD><TD>14 00 00</TD><TD>-62 17</TD><TD>12.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>6.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD>Kes 20A</TD><TD>Simbad</TD></TR>
+<TR><TD>G311.5-00.3</TD><TD>14 05 38</TD><TD>-61 58</TD><TD>5.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G312.4-00.4</TD><TD>14 13 00</TD><TD>-61 44</TD><TD>38.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>45.0</TD><TD></TD><TD>0.36</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G312.5-03.0</TD><TD>14 21 00</TD><TD>-64 12</TD><TD>20.0</TD><TD>18.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G315.1+02.7</TD><TD>14 24 30</TD><TD>-57 50</TD><TD>190.0</TD><TD>150.0</TD><TD></TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G315.4-02.3</TD><TD>14 43 00</TD><TD>-62 30</TD><TD>42.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>49.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD>RCW 86, MSH 14-63</TD><TD>Simbad</TD></TR>
+<TR><TD>G315.4-00.3</TD><TD>14 35 55</TD><TD>-60 36</TD><TD>24.0</TD><TD>13.0</TD><TD></TD><TD>?</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G315.9-00.0</TD><TD>14 38 25</TD><TD>-60 11</TD><TD>25.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>0.8</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G316.3-00.0</TD><TD>14 41 30</TD><TD>-60 00</TD><TD>29.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>20.0</TD><TD>?</TD><TD>0.40</TD><TD></TD><TD>(MSH 14-57)</TD><TD>Simbad</TD></TR>
+<TR><TD>G317.3-00.2</TD><TD>14 49 40</TD><TD>-59 46</TD><TD>11.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.7</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G318.2+00.1</TD><TD>14 54 50</TD><TD>-59 04</TD><TD>40.0</TD><TD>35.0</TD><TD></TD><TD>S</TD><TD>&gt;</TD><TD>3.9</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G318.9+00.4</TD><TD>14 58 30</TD><TD>-58 29</TD><TD>30.0</TD><TD>14.0</TD><TD></TD><TD>C</TD><TD></TD><TD>4.0</TD><TD>?</TD><TD>0.20</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G320.4-01.2</TD><TD>15 14 30</TD><TD>-59 08</TD><TD>35.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>60.0</TD><TD>?</TD><TD>0.40</TD><TD></TD><TD>MSH 15-52, RCW 89</TD><TD>Simbad</TD></TR>
+<TR><TD>G320.6-01.6</TD><TD>15 17 50</TD><TD>-59 16</TD><TD>60.0</TD><TD>30.0</TD><TD></TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G321.9-01.1</TD><TD>15 23 45</TD><TD>-58 13</TD><TD>28.0</TD><TD></TD><TD></TD><TD>S</TD><TD>&gt;</TD><TD>3.4</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G321.9-00.3</TD><TD>15 20 40</TD><TD>-57 34</TD><TD>31.0</TD><TD>23.0</TD><TD></TD><TD>S</TD><TD></TD><TD>13.0</TD><TD></TD><TD>0.30</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G322.1+00.0</TD><TD>15 20 49</TD><TD>-57 10</TD><TD>8.0</TD><TD>4.5</TD><TD>?</TD><TD>S?</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G322.5-00.1</TD><TD>15 23 23</TD><TD>-57 06</TD><TD>15.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>1.5</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G323.5+00.1</TD><TD>15 28 42</TD><TD>-56 21</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G326.3-01.8</TD><TD>15 53 00</TD><TD>-56 10</TD><TD>38.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>145.0</TD><TD></TD><TD></TD><TD>v</TD><TD>MSH 15-56</TD><TD>Simbad</TD></TR>
+<TR><TD>G327.1-01.1</TD><TD>15 54 25</TD><TD>-55 09</TD><TD>18.0</TD><TD></TD><TD></TD><TD>C</TD><TD></TD><TD>7.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G327.2-00.1</TD><TD>15 50 55</TD><TD>-54 18</TD><TD>5.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.4</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G327.4+00.4</TD><TD>15 48 20</TD><TD>-53 49</TD><TD>21.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>30.0</TD><TD>?</TD><TD>0.60</TD><TD></TD><TD>Kes 27</TD><TD>Simbad</TD></TR>
+<TR><TD>G327.4+01.0</TD><TD>15 46 48</TD><TD>-53 20</TD><TD>14.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.9</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G327.6+14.6</TD><TD>15 02 50</TD><TD>-41 56</TD><TD>30.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>19.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD>SN1006, PKS 1459-41</TD><TD>Simbad</TD></TR>
+<TR><TD>G328.4+00.2</TD><TD>15 55 30</TD><TD>-53 17</TD><TD>5.0</TD><TD></TD><TD></TD><TD>F</TD><TD></TD><TD>15.0</TD><TD></TD><TD>0.00</TD><TD></TD><TD>(MSH 15-57)</TD><TD>Simbad</TD></TR>
+<TR><TD>G329.7+00.4</TD><TD>16 01 20</TD><TD>-52 18</TD><TD>40.0</TD><TD>33.0</TD><TD></TD><TD>S</TD><TD>&gt;</TD><TD>34.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G330.0+15.0</TD><TD>15 10 00</TD><TD>-40 00</TD><TD>180.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD>350.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD>Lupus Loop</TD><TD>Simbad</TD></TR>
+<TR><TD>G330.2+01.0</TD><TD>16 01 06</TD><TD>-51 34</TD><TD>11.0</TD><TD></TD><TD></TD><TD>S?</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.30</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G332.0+00.2</TD><TD>16 13 17</TD><TD>-50 53</TD><TD>12.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD>?</TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G332.4-00.4</TD><TD>16 17 33</TD><TD>-51 02</TD><TD>10.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>28.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>RCW 103</TD><TD>Simbad</TD></TR>
+<TR><TD>G332.4+00.1</TD><TD>16 15 20</TD><TD>-50 42</TD><TD>15.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>26.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>MSH 16-51, Kes 32</TD><TD>Simbad</TD></TR>
+<TR><TD>G332.5-05.6</TD><TD>16 43 20</TD><TD>-54 30</TD><TD>35.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.0</TD><TD>?</TD><TD>0.70</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G335.2+00.1</TD><TD>16 27 45</TD><TD>-48 47</TD><TD>21.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>16.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G336.7+00.5</TD><TD>16 32 11</TD><TD>-47 19</TD><TD>14.0</TD><TD>10.0</TD><TD></TD><TD>S</TD><TD></TD><TD>6.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G337.0-00.1</TD><TD>16 35 57</TD><TD>-47 36</TD><TD>1.5</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.5</TD><TD></TD><TD>0.60</TD><TD>?</TD><TD>(CTB 33)</TD><TD>Simbad</TD></TR>
+<TR><TD>G337.2-00.7</TD><TD>16 39 28</TD><TD>-47 51</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.5</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G337.2+00.1</TD><TD>16 35 55</TD><TD>-47 20</TD><TD>3.0</TD><TD>2.0</TD><TD></TD><TD>?</TD><TD></TD><TD>1.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G337.3+01.0</TD><TD>16 32 39</TD><TD>-46 36</TD><TD>15.0</TD><TD>12.0</TD><TD></TD><TD>S</TD><TD></TD><TD>16.0</TD><TD></TD><TD>0.55</TD><TD></TD><TD>Kes 40</TD><TD>Simbad</TD></TR>
+<TR><TD>G337.8-00.1</TD><TD>16 39 01</TD><TD>-46 59</TD><TD>9.0</TD><TD>6.0</TD><TD></TD><TD>S</TD><TD></TD><TD>18.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD>Kes 41</TD><TD>Simbad</TD></TR>
+<TR><TD>G338.1+00.4</TD><TD>16 37 59</TD><TD>-46 24</TD><TD>15.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD>4.0</TD><TD>?</TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G338.3-00.0</TD><TD>16 41 00</TD><TD>-46 34</TD><TD>8.0</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD>7.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G338.5+00.1</TD><TD>16 41 09</TD><TD>-46 19</TD><TD>9.0</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>12.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G340.4+00.4</TD><TD>16 46 31</TD><TD>-44 39</TD><TD>10.0</TD><TD>7.0</TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G340.6+00.3</TD><TD>16 47 41</TD><TD>-44 34</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G341.2+00.9</TD><TD>16 47 35</TD><TD>-43 47</TD><TD>22.0</TD><TD>16.0</TD><TD></TD><TD>C</TD><TD></TD><TD>1.5</TD><TD>?</TD><TD>0.60</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G341.9-00.3</TD><TD>16 55 01</TD><TD>-44 01</TD><TD>7.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.5</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G342.0-00.2</TD><TD>16 54 50</TD><TD>-43 53</TD><TD>12.0</TD><TD>9.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.5</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G342.1+00.9</TD><TD>16 50 43</TD><TD>-43 04</TD><TD>10.0</TD><TD>9.0</TD><TD></TD><TD>S</TD><TD></TD><TD>0.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G343.0-06.0</TD><TD>17 25 00</TD><TD>-46 30</TD><TD>250.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>?</TD><TD>RCW 114</TD><TD>Simbad</TD></TR>
+<TR><TD>G343.1-02.3</TD><TD>17 08 00</TD><TD>-44 16</TD><TD>32.0</TD><TD></TD><TD>?</TD><TD>C?</TD><TD></TD><TD>8.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G343.1-00.7</TD><TD>17 00 25</TD><TD>-43 14</TD><TD>27.0</TD><TD>21.0</TD><TD></TD><TD>S</TD><TD></TD><TD>7.8</TD><TD></TD><TD>0.55</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G344.7-00.1</TD><TD>17 03 51</TD><TD>-41 42</TD><TD>8.0</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD>2.5</TD><TD>?</TD><TD>0.30</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G345.7-00.2</TD><TD>17 07 20</TD><TD>-40 53</TD><TD>6.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>0.6</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G346.6-00.2</TD><TD>17 10 19</TD><TD>-40 11</TD><TD>8.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G347.3-00.5</TD><TD>17 13 50</TD><TD>-39 45</TD><TD>65.0</TD><TD>55.0</TD><TD></TD><TD>S?</TD><TD></TD><TD>30.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD>RX J1713.7-3946</TD><TD>Simbad</TD></TR>
+<TR><TD>G348.5-00.0</TD><TD>17 15 26</TD><TD>-38 28</TD><TD>10.0</TD><TD></TD><TD>?</TD><TD>S?</TD><TD></TD><TD>10.0</TD><TD>?</TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G348.5+00.1</TD><TD>17 14 06</TD><TD>-38 32</TD><TD>15.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>72.0</TD><TD></TD><TD>0.30</TD><TD></TD><TD>CTB 37A</TD><TD>Simbad</TD></TR>
+<TR><TD>G348.7+00.3</TD><TD>17 13 55</TD><TD>-38 11</TD><TD>17.0</TD><TD></TD><TD>?</TD><TD>S</TD><TD></TD><TD>26.0</TD><TD></TD><TD>0.30</TD><TD></TD><TD>CTB 37B</TD><TD>Simbad</TD></TR>
+<TR><TD>G349.2-00.1</TD><TD>17 17 15</TD><TD>-38 04</TD><TD>9.0</TD><TD>6.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.4</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G349.7+00.2</TD><TD>17 17 59</TD><TD>-37 26</TD><TD>2.5</TD><TD>2.0</TD><TD></TD><TD>S</TD><TD></TD><TD>20.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G350.0-02.0</TD><TD>17 27 50</TD><TD>-38 32</TD><TD>45.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>26.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G350.1-00.3</TD><TD>17 17 40</TD><TD>-37 24</TD><TD>4.0</TD><TD></TD><TD>?</TD><TD>?</TD><TD></TD><TD>6.0</TD><TD>?</TD><TD>0.80</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G351.2+00.1</TD><TD>17 22 27</TD><TD>-36 11</TD><TD>7.0</TD><TD></TD><TD></TD><TD>C?</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD>0.40</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G351.7+00.8</TD><TD>17 21 00</TD><TD>-35 27</TD><TD>18.0</TD><TD>14.0</TD><TD></TD><TD>S</TD><TD></TD><TD>10.0</TD><TD></TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G351.9-00.9</TD><TD>17 28 52</TD><TD>-36 16</TD><TD>12.0</TD><TD>9.0</TD><TD></TD><TD>S</TD><TD></TD><TD>1.8</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G352.7-00.1</TD><TD>17 27 40</TD><TD>-35 07</TD><TD>8.0</TD><TD>6.0</TD><TD></TD><TD>S</TD><TD></TD><TD>4.0</TD><TD></TD><TD>0.60</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G353.6-00.7</TD><TD>17 32 00</TD><TD>-34 44</TD><TD>30.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G353.9-02.0</TD><TD>17 38 55</TD><TD>-35 11</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.0</TD><TD>?</TD><TD>0.50</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G354.1+00.1</TD><TD>17 30 28</TD><TD>-33 46</TD><TD>15.0</TD><TD>3.0</TD><TD>?</TD><TD>C?</TD><TD></TD><TD></TD><TD>?</TD><TD></TD><TD>v</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G354.8-00.8</TD><TD>17 36 00</TD><TD>-33 42</TD><TD>19.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.8</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G355.4+00.7</TD><TD>17 31 20</TD><TD>-32 26</TD><TD>25.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>5.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G355.6-00.0</TD><TD>17 35 16</TD><TD>-32 38</TD><TD>8.0</TD><TD>6.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G355.9-02.5</TD><TD>17 45 53</TD><TD>-33 43</TD><TD>13.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>8.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G356.2+04.5</TD><TD>17 19 00</TD><TD>-29 40</TD><TD>25.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.0</TD><TD></TD><TD>0.70</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G356.3-01.5</TD><TD>17 42 35</TD><TD>-32 52</TD><TD>20.0</TD><TD>15.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G356.3-00.3</TD><TD>17 37 56</TD><TD>-32 16</TD><TD>11.0</TD><TD>7.0</TD><TD></TD><TD>S</TD><TD></TD><TD>3.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G357.7-00.1</TD><TD>17 40 29</TD><TD>-30 58</TD><TD>8.0</TD><TD>3.0</TD><TD>?</TD><TD>?</TD><TD></TD><TD>37.0</TD><TD></TD><TD>0.40</TD><TD></TD><TD>MSH 17-39</TD><TD>Simbad</TD></TR>
+<TR><TD>G357.7+00.3</TD><TD>17 38 35</TD><TD>-30 44</TD><TD>24.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>10.0</TD><TD></TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G358.0+03.8</TD><TD>17 26 00</TD><TD>-28 36</TD><TD>38.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>1.5</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G358.1+00.1</TD><TD>17 37 00</TD><TD>-29 59</TD><TD>20.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>2.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G358.5-00.9</TD><TD>17 46 10</TD><TD>-30 40</TD><TD>17.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>4.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G359.0-00.9</TD><TD>17 46 50</TD><TD>-30 16</TD><TD>23.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>23.0</TD><TD></TD><TD>0.50</TD><TD></TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G359.1-00.5</TD><TD>17 45 30</TD><TD>-29 57</TD><TD>24.0</TD><TD></TD><TD></TD><TD>S</TD><TD></TD><TD>14.0</TD><TD></TD><TD>0.40</TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+<TR><TD>G359.1+00.9</TD><TD>17 39 36</TD><TD>-29 11</TD><TD>12.0</TD><TD>11.0</TD><TD></TD><TD>S</TD><TD></TD><TD>2.0</TD><TD>?</TD><TD></TD><TD>?</TD><TD></TD><TD>Simbad</TD></TR>
+</TABLEDATA></DATA>
+</TABLE>
+
+<INFO name="Warning" value="No center provided++++"/>
+<INFO name="Warning" value="skip recno in all column selection"/>
+</RESOURCE>
+</VOTABLE>
